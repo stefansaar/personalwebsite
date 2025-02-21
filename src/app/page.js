@@ -41,21 +41,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Career Section with conditional parallax effect */}
+      {/* Career Section with conditional effect */}
       <div className="relative w-full h-96 overflow-hidden">
         <div
           className="absolute inset-0 bg-[url('/stefstarship.png')] bg-cover bg-center"
           style={{
             backgroundAttachment: isMobile ? 'scroll' : 'fixed',
-            ...(isMobile && {
-              transform: `translateY(${scrollY * 0.3}px) scale(1.25)`,
-              transition: 'transform 0.1s ease-out',
-              top: '-10%',
-              height: '110%',
-              pointerEvents: 'none',
-              willChange: 'transform',
-              WebkitWillChange: 'transform'
-            })
+            // On mobile, simulate the fixed effect by adjusting the background position
+            ...(isMobile && { backgroundPosition: `center ${-scrollY * 0.2}px` })
           }}
         ></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
