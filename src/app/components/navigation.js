@@ -40,7 +40,7 @@ export default function Navigation() {
           <Link
             key={item.href}
             href={item.href}
-            className={`px-6 py-4 text-2xl border border-white rounded-none transition-all duration-200 ${
+            className={`w-48 text-center px-6 py-4 text-2xl border border-white rounded-none transition-all duration-200 ${
               (pathname === item.href || (item.href === '/projects' && pathname.startsWith('/projects')))
                 ? 'bg-white text-black'
                 : 'bg-transparent text-white hover:bg-nav-hover hover:text-nav-bg hover:text-nav-text hover:bg-gradient-to-t from-white to-nav-bg to-80%'

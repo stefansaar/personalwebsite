@@ -26,7 +26,7 @@ export default function NestAssured() {
       {/* Parallax Header Section */}
       <div className="relative w-full h-[45vh] md:h-[45vh] overflow-hidden">
         <div
-          className="absolute inset-0 bg-[url('/nestaesthetic.jpg')] bg-cover bg-center scale-125"
+          className="absolute inset-0 bg-[url('/nestaesthetic.png')] bg-cover bg-center scale-125"
           style={{ 
             backgroundAttachment: 'fixed',
             transform: `translateY(${scrollY * 0.3}px) scale(1.25)`,
@@ -54,7 +54,7 @@ export default function NestAssured() {
       <div className="mt-4 flex flex-col-reverse md:flex-row items-center justify-center px-8 md:px-48">
         <div className="mt-10 flex justify-center w-full md:w-1/2">
           <Image
-            src="/nestproject.jpg"
+            src="/nestproject.png"
             alt="Nest Assured"
             width={500}
             height={500}
