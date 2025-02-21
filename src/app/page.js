@@ -6,17 +6,17 @@ export default function Home() {
       {/* Main Container */}
       <div className="bg-[url('/profilebg.png')] bg-cover lg:px-24 md:px-8 pt-4 flex flex-col-reverse md:flex-row md:max-h-[500px] items-center">
         {/* Profile Image */}
-        <div>
-          <Image
-            src="/stefanpng.png"
-            alt="Profile"
-            width={1050}
-            height={1078}
-            className="flex-shrink-0 md:max-h-[500px] md:max-w-[500px]"
-          />
-        </div>
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
+            <Image
+              src="/stefanpng.png"
+              alt="Profile"
+              width={1050}
+              height={1078}
+              className="flex-shrink-0 max-h-[250px] sm:max-h-[350px] md:max-h-[500px] max-w-[250px] sm:max-w-[350px] md:max-w-[500px]"
+            />
+          </div>
 
-        {/* About me section */}
+          {/* About me section */}
         <div className="mt-8 md:mt-0 md:ml-0 mx-12 text-center md:text-left md:mx-20">
           <h1 className="text-6xl font-bold mb-4 text-nav-bg">About me.</h1>
           <p className="text-xl md:max-h-[200px] text-gray-600 md:py-4">
@@ -44,11 +44,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-green-500 h-96 w-full">
-        <h1>Hello</h1>
+      <div className="bg-cover h-96 w-full flex items-center justify-center">
+        <div className="flex items-center just">
+          <h1 className="text-white text-3xl md:text-5xl font-bold">Under Construction...</h1>
+          <span className="ml-4 text-5xl">🚧</span>
+        </div>
       </div>
+
       <div className="bg-white h-96 w-full">
-        <h1>Hello</h1>
       </div>
     </div>
   );

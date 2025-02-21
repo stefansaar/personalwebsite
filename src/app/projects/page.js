@@ -8,8 +8,8 @@ export default function Projects() {
         {/* Projects Header */}
       <div className="bg-[url('/projectcover.png')] bg-cover bg-center w-full py-16">
         <h1 className="text-6xl font-bold text-white text-center mb-8">Projects</h1>
-        <p className="text-white text-lg text-center mx-8 md:mx-36">
-        My projects represent a blend of creativity, engineering, and innovation, 
+        <p className="text-white text-lg md:text-center text-justify mx-12 md:mx-36">
+        With my projects I try to represent a blend of creativity, engineering, and innovation, 
         tackling challenges across robotics, design, and technology. 
         Each project highlights my commitment to pushing boundaries, exploring new ideas, 
         and delivering practical, impactful solutions.
