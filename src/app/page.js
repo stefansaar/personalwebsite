@@ -1,6 +1,20 @@
+'use client'
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="flex flex-col items-center">
       {/* Main Container */}
@@ -27,19 +41,30 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Career Section with Parallax Effect */}
+      {/* Career Section with conditional parallax effect */}
       <div className="relative w-full h-96 overflow-hidden">
         <div
           className="absolute inset-0 bg-[url('/stefstarship.png')] bg-cover bg-center"
-          style={{ backgroundAttachment: 'fixed' }}
+          style={{
+            backgroundAttachment: isMobile ? 'scroll' : 'fixed',
+            ...(isMobile && {
+              transform: `translateY(${scrollY * 0.3}px) scale(1.25)`,
+              transition: 'transform 0.1s ease-out',
+              top: '-10%',
+              height: '110%',
+              pointerEvents: 'none',
+              willChange: 'transform',
+              WebkitWillChange: 'transform'
+            })
+          }}
         ></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
           <h1 className="text-white text-6xl font-bold mb-16 mt-16 text-center">Career</h1>
           <p className="text-xl mx-8 pb-16 relative text-center text-white max-w-4xl">
-          My journey reflects a passion for engineering and innovation, with experiences 
-          spanning design, robotics, and interdisciplinary problem-solving. 
-          Explore my career highlights to see how I’ve applied creativity and 
-          technical expertise to tackle real-world challenges and drive impactful results.
+            My journey reflects a passion for engineering and innovation, with experiences 
+            spanning design, robotics, and interdisciplinary problem-solving. 
+            Explore my career highlights to see how I’ve applied creativity and 
+            technical expertise to tackle real-world challenges and drive impactful results.
           </p>
         </div>
       </div>
