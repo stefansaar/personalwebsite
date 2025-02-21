@@ -44,11 +44,11 @@ export default function Home() {
       {/* Career Section with conditional effect */}
       <div className="relative w-full h-96 overflow-hidden">
         <div
-          className="absolute inset-0 bg-[url('/stefstarship.png')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('/stefstarship.png')] bg-center"
           style={{
             backgroundAttachment: isMobile ? 'scroll' : 'fixed',
-            // On mobile, simulate the fixed effect by adjusting the background position
-            ...(isMobile && { backgroundPosition: `center ${-scrollY * 0.2}px` })
+            backgroundSize: isMobile ? '130%' : 'cover',
+            backgroundRepeat: 'no-repeat'
           }}
         ></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
