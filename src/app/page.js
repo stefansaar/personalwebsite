@@ -48,8 +48,7 @@ export default function Home() {
           style={{
             backgroundAttachment: isMobile ? 'scroll' : 'fixed',
             ...(isMobile && {
-              transform: `translateY(${scrollY * 0.3}px) scale(1.25)`,
-              transition: 'transform 0.1s ease-out',
+              transform: `translateY(${scrollY * 0.3}px) scale(1.75)`,
               top: '-10%',
               height: '110%',
               pointerEvents: 'none',
