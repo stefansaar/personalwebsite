@@ -21,8 +21,8 @@ export default function Projects() {
           <ProjectTile imageSrc="/nestproject.png" title="Nest Assured" link="/projects/nestassured" />
           <ProjectTile imageSrc="/carproject.png" title="Aero-2S" link="/projects/carproject" />
           <ProjectTile imageSrc="/multibodysimproject.png" title="Multibody Simulation" link="/projects/multibodysim" />
-          <ProjectTile imageSrc="/blackjackproject.png" title="Blackjack+" link="/projects/blackjack" />
-          <ProjectTile imageSrc="/selfbalancingproject.png" title="Self-balancing robot" link="/projects/selfbalancing" />
+          <ProjectTile imageSrc="/blackjackproject1.png" title="Blackjack+" link="/projects/blackjack" />
+          <ProjectTile imageSrc="/selfbalancingproject1.png" title="Self-balancing robot" link="/projects/selfbalancing" />
           <ProjectTile imageSrc="/wordlestproject.png" title="WorldEST" link="/projects/wordlest" />
           <ProjectTile imageSrc="/wifircproject.png" title="WiFi RC car" link="/projects/wifirc" />
         </div>
