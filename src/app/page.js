@@ -1,17 +1,6 @@
-'use client'
-
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="flex flex-col items-center">
       {/* Main Container */}
@@ -42,16 +31,7 @@ export default function Home() {
       <div className="relative w-full h-96 overflow-hidden">
         <div
           className="absolute inset-0 bg-[url('/stefstarship.png')] bg-cover bg-center"
-          style={{ 
-            backgroundAttachment: 'fixed',
-            transform: `translateY(${scrollY * 0.3}px) scale(1.25)`,
-            transition: 'transform 0.1s ease-out',
-            top: '-10%',
-            height: '110%',
-            pointerEvents: 'none',
-            willChange: 'transform',
-            WebkitWillChange: 'transform'
-          }}
+          style={{ backgroundAttachment: 'fixed' }}
         ></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
           <h1 className="text-white text-6xl font-bold mb-16 mt-16 text-center">Career</h1>
